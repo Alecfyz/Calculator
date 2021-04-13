@@ -1,3 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/textview2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Result"
+        android:textSize="80dp" />
+
+    <EditText
+        android:id="@+id/textInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="right"
+        android:text="FFFFFFFFFFFFFF"
+        android:textSize="30dp"
+        />
+
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:columnCount="4"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:layout_marginRight="5dp"
+            android:text="1" />
+
+        <Button
+            android:layout_marginRight="5dp"
+            android:text="2" />
+
+        <Button
+            android:layout_marginRight="10dp"
+            android:text="3" />
+
+        <Button android:text="+" />
+
+        <Button
+            android:layout_marginRight="5dp"
+            android:text="4" />
+
+        <Button
+            android:layout_marginRight="5dp"
+            android:text="5" />
+
+        <Button
+            android:layout_marginRight="10dp"
+            android:text="6" />
+
+        <Button android:text="-" />
+
+        <Button
+            android:layout_marginRight="5dp"
+            android:text="7" />
+
+        <Button
+            android:layout_marginRight="5dp"
+            android:text="8" />
+
+        <Button
+            android:layout_marginRight="10dp"
+            android:text="9" />
+
+        <Button android:text="*" />
+
+        <Button
+            android:layout_marginRight="5dp"
+            android:text="0" />
+
+        <Button
+            android:layout_marginRight="5dp"
+            android:text="." />
+
+        <Button
+            android:layout_marginRight="10dp"
+            android:text="=" />
+
+        <Button android:text="/" />
+
+    </GridLayout>
 </LinearLayout>

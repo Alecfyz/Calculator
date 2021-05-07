@@ -25,13 +25,14 @@
         android:id="@+id/viewResult"
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:textColor="@color/black"
         android:layout_gravity="center_horizontal"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="15dp"
         android:layout_marginRight="50dp"
         android:gravity="right"
         android:text="Result"
-        android:textSize="60dp" />
+        android:textSize="50dp" />
 
     <GridLayout
         android:layout_width="wrap_content"
@@ -44,75 +45,88 @@
 
 
         <Button
+            android:id="@+id/btn7"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginRight="5dp"
             android:text="7" />
 
         <Button
+            android:id="@+id/btn8"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginRight="5dp"
             android:text="8" />
 
         <Button
+            android:id="@+id/btn9"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginRight="10dp"
             android:text="9" />
 
         <Button
+            android:id="@+id/btnplus"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:text="+" />
 
         <Button
+            android:id="@+id/btn4"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginRight="5dp"
             android:text="4" />
 
         <Button
+            android:id="@+id/btn5"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginRight="5dp"
             android:text="5" />
 
         <Button
+            android:id="@+id/btn6"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginRight="10dp"
             android:text="6" />
 
         <Button
+            android:id="@+id/btnminus"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:text="-" />
 
         <Button
+            android:id="@+id/btn1"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginRight="5dp"
             android:text="1" />
 
         <Button
+            android:id="@+id/btn2"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginRight="5dp"
             android:text="2" />
 
         <Button
+            android:id="@+id/btn3"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginRight="10dp"
             android:text="3" />
 
         <Button
+            android:id="@+id/btnmult"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:text="*" />
 
         <Button
+            android:id="@+id/btn0"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginRight="5dp"
@@ -125,12 +139,14 @@
             android:text="." />
 
         <Button
+            android:id="@+id/btngetres"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginRight="10dp"
             android:text="=" />
 
         <Button
+            android:id="@+id/btndiv"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:text="/" />

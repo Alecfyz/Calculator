@@ -116,6 +116,32 @@ public class MainActivity extends AppCompatActivity {
             calculator.readkey("=");
             CalcText.setText(calculator.getCurString());
         });*/
+
+        findViewById(R.id.btnplus).setOnClickListener(v -> {
+            logCycle("Key < + > pressed");
+            calculator.readkey("+");
+            CalcText.setText(calculator.getCurString());
+        });
+        findViewById(R.id.btnminus).setOnClickListener(v -> {
+            logCycle("Key < - > pressed");
+            calculator.readkey("-");
+            CalcText.setText(calculator.getCurString());
+        });
+        findViewById(R.id.btndiv).setOnClickListener(v -> {
+            logCycle("Key < / > pressed");
+            calculator.readkey("/");
+            CalcText.setText(calculator.getCurString());
+        });
+        findViewById(R.id.btnmult).setOnClickListener(v -> {
+            logCycle("Key < * > pressed");
+            calculator.readkey("*");
+            CalcText.setText(calculator.getCurString());
+        });
+        findViewById(R.id.btngetres).setOnClickListener(v -> {
+            logCycle("Key < = > pressed");
+            calculator.readkey("=");
+            CalcText.setText(calculator.getResult());
+        });
     }
 
     private final int[] numberButtonIds = new int[]{R.id.btn0, R.id.btn1, R.id.btn2, R.id.btn3,
@@ -127,11 +153,13 @@ public class MainActivity extends AppCompatActivity {
                 Button btn = (Button)v;
                 String btnStrng = btn.getText().toString();
                 logCycle("Key <" + btnStrng + "> pressed");
+//                logCycle("CurString = " + calculator.getCurString() + "> pressed");
                 calculator.readkey(btnStrng);
                 CalcText.setText(calculator.getCurString());
             });
         }
     }
+
 
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {

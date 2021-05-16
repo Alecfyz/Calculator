@@ -9,10 +9,12 @@ import android.widget.Toast;
 
 import com.example.calculator.R;
 
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 import static model.Operations.ADD;
 import static model.Operations.DIV;
 import static model.Operations.MULT;
 import static model.Operations.SUB;
+import static model.Operations.valueOf;
 
 public class Calculator implements IntfcCalculator, Parcelable {
     private float arg1;
@@ -31,6 +33,8 @@ public class Calculator implements IntfcCalculator, Parcelable {
         arg1 = in.readFloat();
         arg2 = in.readFloat();
         result = in.readFloat();
+//        operation = in.readTypedObject();
+        CurString = in.readString();
     }
 
     public static final Creator<Calculator> CREATOR = new Creator<Calculator>() {
@@ -61,18 +65,22 @@ public class Calculator implements IntfcCalculator, Parcelable {
                 break;
             case "+":
                 setOp(ADD);
+                addToCurString(key);
                 break;
 
             case "-":
                 setOp(SUB);
+                addToCurString(key);
                 break;
 
             case "*":
                 setOp(MULT);
+                addToCurString(key);
                 break;
 
             case "/":
                 setOp(DIV);
+                addToCurString(key);
                 break;
 
             case "=":
@@ -88,6 +96,7 @@ public class Calculator implements IntfcCalculator, Parcelable {
 
     private void clearCurString() {
         this.CurString = "";
+//        CurString = "";
     }
 
     public String getCurString() {
@@ -95,9 +104,9 @@ public class Calculator implements IntfcCalculator, Parcelable {
     }
 
     private void setOp(Operations oper) {
+//        clearCurString();
         operation = oper;
         convertToArg("arg1");
-        clearCurString();
     }
 
     private void convertToArg(String argstr){
@@ -132,7 +141,7 @@ public class Calculator implements IntfcCalculator, Parcelable {
 
         switch (op) {
             case ADD:
-                doAddition(this.arg1, this.arg2);
+                doAddition();
                 break;
             case DIV:
                 doDivision(this.arg1, this.arg2);
@@ -148,7 +157,7 @@ public class Calculator implements IntfcCalculator, Parcelable {
         }
     }
 
-    private void doAddition(float arg1, float arg2) {
+    private void doAddition() {
         this.result = this.arg1 + this.arg2;
     }
 
@@ -170,8 +179,9 @@ public class Calculator implements IntfcCalculator, Parcelable {
         this.arg2 = (float) arg2;
     }
 
-    public float getResult() {
-        return this.result;
+    public String getResult() {
+        this.CurString = String.valueOf(this.result);
+        return String.valueOf(this.result);
     }
 
     @Override
@@ -184,6 +194,7 @@ public class Calculator implements IntfcCalculator, Parcelable {
         dest.writeFloat(arg1);
         dest.writeFloat(arg2);
         dest.writeFloat(result);
+        dest.writeString(CurString);
     }
 
 

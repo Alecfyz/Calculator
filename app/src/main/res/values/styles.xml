@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CalButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:textSize">@dimen/calcBut_textsize</item>
+        <item name="android:backgroundTint">@color/teal_200</item>
+    </style>
+</resources>

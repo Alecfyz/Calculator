@@ -9,147 +9,135 @@
     tools:context="com.example.calculator.MainActivity">
 
     <TextView
-        android:id="@+id/header_title"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginRight="0dp"
-        android:background="@color/teal_200"
-        android:gravity="center"
-        android:text="Super Calculator"
-        android:textColor="@color/purple_700" />
-
-    <TextView
         android:id="@+id/viewResult"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="@dimen/layout_height"
         android:textColor="@color/black"
         android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="50dp"
+        android:layout_marginLeft="@dimen/TVlayout_marginLeft"
+        android:layout_marginTop="@dimen/TVlayout_marginTop"
+        android:layout_marginRight="@dimen/TVlmarginR"
         android:gravity="right"
-        android:text="Result"
-        android:textSize="50dp" />
+        android:text="@string/resultText"
+        android:textSize="@dimen/TVtextSize" />
 
     <GridLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/grid_layoutW"
+        android:layout_height="@dimen/grid_layoutH"
         android:layout_gravity="center"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:columnCount="4"
-        android:orientation="horizontal">
+        android:layout_marginStart="@dimen/layout_marginStart"
+        android:layout_marginEnd="@dimen/layout_marginEnd"
+        android:columnCount="@dimen/columnCount"
+        android:orientation="horizontal"
+        >
 
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn7"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="5dp"
-            android:text="7" />
+            android:layout_width="@dimen/buttonLayout_width"
+            android:layout_height="@dimen/buttonLayout_height"
+            android:layout_marginRight="@dimen/buttonRegularRMargin"
+            android:text="@string/button_7"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn8"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="5dp"
-            android:text="8" />
+            android:layout_width="@dimen/buttonLayout_width"
+            android:layout_height="@dimen/buttonLayout_height"
+            android:layout_marginRight="@dimen/buttonRegularRMargin"
+            android:text="@string/button_8" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn9"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="10dp"
-            android:text="9" />
+            android:layout_width="@dimen/buttonLayout_width"
+            android:layout_height="@dimen/buttonLayout_height"
+            android:layout_marginRight="@dimen/buttonFringeRMargin"
+            android:text="@string/button_9" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnplus"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:text="+" />
+            android:layout_width="@dimen/buttonLayout_width"
+            android:layout_height="@dimen/buttonLayout_height"
+            android:text="@string/button_add" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn4"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="5dp"
-            android:text="4" />
+            android:layout_width="@dimen/buttonLayout_width"
+            android:layout_height="@dimen/buttonLayout_height"
+            android:layout_marginRight="@dimen/buttonRegularRMargin"
+            android:text="@string/button_4" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn5"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="5dp"
-            android:text="5" />
+            android:layout_width="@dimen/buttonLayout_width"
+            android:layout_height="@dimen/buttonLayout_height"
+            android:layout_marginRight="@dimen/buttonRegularRMargin"
+            android:text="@string/button_5" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn6"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="10dp"
-            android:text="6" />
+            android:layout_width="@dimen/buttonLayout_width"
+            android:layout_height="@dimen/buttonLayout_height"
+            android:layout_marginRight="@dimen/buttonFringeRMargin"
+            android:text="@string/button_6" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnminus"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:text="-" />
+            android:layout_width="@dimen/buttonLayout_width"
+            android:layout_height="@dimen/buttonLayout_height"
+            android:text="@string/button_sub" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn1"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="5dp"
-            android:text="1" />
+            android:layout_width="@dimen/buttonLayout_width"
+            android:layout_height="@dimen/buttonLayout_height"
+            android:layout_marginRight="@dimen/buttonRegularRMargin"
+            android:text="@string/button_1" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn2"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="5dp"
-            android:text="2" />
+            android:layout_width="@dimen/buttonLayout_width"
+            android:layout_height="@dimen/buttonLayout_height"
+            android:layout_marginRight="@dimen/buttonRegularRMargin"
+            android:text="@string/button_2" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn3"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="10dp"
-            android:text="3" />
+            android:layout_width="@dimen/buttonLayout_width"
+            android:layout_height="@dimen/buttonLayout_height"
+            android:layout_marginRight="@dimen/buttonFringeRMargin"
+            android:text="@string/button_3" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnmult"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:text="*" />
+            android:layout_width="@dimen/buttonLayout_width"
+            android:layout_height="@dimen/buttonLayout_height"
+            android:text="@string/button_mult" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn0"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="5dp"
-            android:text="0" />
+            android:layout_width="@dimen/buttonLayout_width"
+            android:layout_height="@dimen/buttonLayout_height"
+            android:layout_marginRight="@dimen/buttonRegularRMargin"
+            android:text="@string/button_0" />
 
-        <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="5dp"
-            android:text="." />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="@dimen/buttonLayout_width"
+            android:layout_height="@dimen/buttonLayout_height"
+            android:layout_marginRight="@dimen/buttonRegularRMargin"
+            android:text="@string/button_dot" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btngetres"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="10dp"
-            android:text="=" />
+            android:layout_width="@dimen/buttonLayout_width"
+            android:layout_height="@dimen/buttonLayout_height"
+            android:layout_marginRight="@dimen/buttonFringeRMargin"
+            android:text="@string/button_res" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btndiv"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:text="/" />
+            android:layout_width="@dimen/buttonLayout_width"
+            android:layout_height="@dimen/buttonLayout_height"
+            android:text="@string/button_div" />
 
     </GridLayout>
 </LinearLayout>

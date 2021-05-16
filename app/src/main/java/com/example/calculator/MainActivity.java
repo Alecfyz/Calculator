@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         CalcText = findViewById(R.id.viewResult);
+        setNumberButtonListeners();
         if (savedInstanceState == null) {
             //First launch
 
@@ -35,7 +37,10 @@ public class MainActivity extends AppCompatActivity {
             CalcText.setText(calculator.getCurString());
         }
 
-        findViewById(R.id.btn1).setOnClickListener(v -> {
+
+
+
+/*        findViewById(R.id.btn1).setOnClickListener(v -> {
             logCycle("Key <1> pressed");
             calculator.readkey("1");
             //            CalcText.setText(getString(R.string.calc_res, calculator.getCurString()));
@@ -110,7 +115,49 @@ public class MainActivity extends AppCompatActivity {
             logCycle("Key <=> pressed");
             calculator.readkey("=");
             CalcText.setText(calculator.getCurString());
+        });*/
+
+        findViewById(R.id.btnplus).setOnClickListener(v -> {
+            logCycle("Key < + > pressed");
+            calculator.readkey("+");
+            CalcText.setText(calculator.getCurString());
         });
+        findViewById(R.id.btnminus).setOnClickListener(v -> {
+            logCycle("Key < - > pressed");
+            calculator.readkey("-");
+            CalcText.setText(calculator.getCurString());
+        });
+        findViewById(R.id.btndiv).setOnClickListener(v -> {
+            logCycle("Key < / > pressed");
+            calculator.readkey("/");
+            CalcText.setText(calculator.getCurString());
+        });
+        findViewById(R.id.btnmult).setOnClickListener(v -> {
+            logCycle("Key < * > pressed");
+            calculator.readkey("*");
+            CalcText.setText(calculator.getCurString());
+        });
+        findViewById(R.id.btngetres).setOnClickListener(v -> {
+            logCycle("Key < = > pressed");
+            calculator.readkey("=");
+            CalcText.setText(calculator.getResult());
+        });
+    }
+
+    private final int[] numberButtonIds = new int[]{R.id.btn0, R.id.btn1, R.id.btn2, R.id.btn3,
+            R.id.btn4, R.id.btn5, R.id.btn6, R.id.btn7, R.id.btn8, R.id.btn9};
+
+    private void setNumberButtonListeners() {
+        for (int i = 0; i < numberButtonIds.length; i++) {
+            findViewById(numberButtonIds[i]).setOnClickListener(v -> {
+                Button btn = (Button)v;
+                String btnStrng = btn.getText().toString();
+                logCycle("Key <" + btnStrng + "> pressed");
+//                logCycle("CurString = " + calculator.getCurString() + "> pressed");
+                calculator.readkey(btnStrng);
+                CalcText.setText(calculator.getCurString());
+            });
+        }
     }
 
 

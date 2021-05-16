@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="buttonLayout_width">60dp</dimen>
+    <dimen name="buttonLayout_height">60dp</dimen>
+    <dimen name="buttonRegularRMargin">5dp</dimen>
+    <dimen name="buttonFringeRMargin">10dp</dimen>
+    <dimen name="columnCount">4</dimen>
+    <dimen name="layout_marginEnd">30dp</dimen>
+    <dimen name="layout_marginStart">30dp</dimen>
+    <dimen name="layoutgravity">center</dimen>
+    <dimen name="TVtextSize">40dp</dimen>
+    <dimen name="TVlmarginR">50dp</dimen>
+    <dimen name="TVlayout_marginTop">15dp</dimen>
+    <dimen name="TVlayout_marginLeft">50dp</dimen>
+    <dimen name="layout_height">120dp</dimen>
+    <dimen name="layoutW">wrap_content</dimen>
+    <dimen name="grid_layoutH">wrap_content</dimen>
+    <dimen name="grid_layoutW">wrap_content</dimen>
+    <dimen name="calcBut_textsize">24sp</dimen>
+</resources>
